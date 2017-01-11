@@ -1,6 +1,21 @@
+/*
+*= require_tree .
+*/
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
 .user-info {
   margin-top: 9px;
+}
+
+.alert-alert {
+  @extend .alert-danger;
+}
+
+.alert-notice {
+  @extend .alert-warning;
+}
+
+.login-right {
+  margin-right: 10px;
 }

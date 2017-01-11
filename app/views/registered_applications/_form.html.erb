@@ -1,0 +1,11 @@
+<%= form_for @registered_application do |f| %>
+  <div class="form-group">
+    <%= f.label :name %>
+    <%= f.text_field :name, :required => true, placeholder: "Enter App Name" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :url %>
+    <%= f.url_field :url, :required => true, placeholder: "Enter App URL" %>
+  </div>
+  <%= f.submit "Save", class: 'btn btn-success' %>
+<% end %>
