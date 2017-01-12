@@ -1,0 +1,14 @@
+<h1> <%= @registered_application.name %> </h1>
+<h3> Total Event Count: <%= @registered_application.events.count %> </h3>
+<br>
+<div>
+    <table class="table table-responsive">
+      <tbody>
+        <% @events.each do |event| %>
+          <tr>
+            <td class="app-name"><%= event[0] %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+</div>

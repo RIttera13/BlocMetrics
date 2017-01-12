@@ -4,11 +4,10 @@
       <tbody>
         <% current_user.registered_applications.each do |registered_application| %>
           <tr>
-            <td class="app-name"><%= registered_application.name %></td>
+            <td class="app-name"><%= link_to registered_application.name, registered_application_path(registered_application.id) %></td>
             <td class="app-name"><%= registered_application.url %></td>
             <td><%= link_to "Remove", [@User, registered_application], method: :delete, class: "btn btn-danger remove-spacing" %></td>
           </tr>
-
         <% end %>
       </tbody>
     </table>
