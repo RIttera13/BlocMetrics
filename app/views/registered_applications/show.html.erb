@@ -6,9 +6,13 @@
       <tbody>
         <% @events.each do |event| %>
           <tr>
-            <td class="app-name"><%= event[0] %> - Count: <%= event[1].size %> </td>
+            <td class="app-name"><%= event[0] %> </td>
           </tr>
         <% end %>
+        <tr>
+          <td class="pie-chart"> <%= pie_chart @registered_application.events.group(:name).count, id: "events-chart", width: "600px", height: "500px" %> </td>
+          <td class="line-chart"> <%= line_chart @registered_application.events.group_by_day(:created_at).count, id: "time-chart", width: "800px", height: "500px" %> </td>
+        </tr>
       </tbody>
     </table>
 </div>

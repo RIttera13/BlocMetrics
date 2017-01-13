@@ -9,7 +9,7 @@ group :production do
 end
 
 group :development do
-  gem 'sqlite3'
+  gem 'pg' # We use postgres
   gem 'pry-rails'
 end
 
@@ -23,6 +23,8 @@ gem 'figaro'
 gem 'pry'
 gem 'devise'
 gem 'pundit'
+gem 'chartkick'
+gem 'groupdate'
 
 
 group :development, :test do

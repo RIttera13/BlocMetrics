@@ -20,7 +20,7 @@ apps = RegisteredApplication.all
 40.times do
   Event.create!(
     registered_application:   apps.sample,
-    name: Faker::Cat.name,
+    name: Faker::Cat.name
   )
 end
 
@@ -43,6 +43,7 @@ end
   Event.create!(
     registered_application:   User.find_by(email: 'member@example.com').registered_applications.sample,
     name: Faker::Cat.name,
+    created_at: Faker::Time.backward(14, :evening)
   )
 end
 
