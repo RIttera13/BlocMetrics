@@ -6,7 +6,7 @@
       <tbody>
         <% @events.each do |event| %>
           <tr>
-            <td class="app-name"><%= event[0] %></td>
+            <td class="app-name"><%= event[0] %> - Count: <%= event[1].size %> </td>
           </tr>
         <% end %>
       </tbody>
